@@ -144,6 +144,23 @@ Acceptance criteria:
 For multiple agents, split work into separate branches and require a PR with
 verification evidence before merging.
 
+Use the complete orchestration pack in [`orchestration/`](orchestration/):
+
+- [`orchestration/cloud_agent_issue_template.md`](orchestration/cloud_agent_issue_template.md)
+  for issue bodies and cloud-agent triggers;
+- [`orchestration/card_krueger_swarm.md`](orchestration/card_krueger_swarm.md)
+  for parallel/sequential/blocked-by task order;
+- [`orchestration/verification_loop.md`](orchestration/verification_loop.md)
+  for green/yellow/red loop exits;
+- [`orchestration/reviewer_issue_template.md`](orchestration/reviewer_issue_template.md)
+  for read-only reviewer agents;
+- [`notes/orchestration_log_template.md`](notes/orchestration_log_template.md)
+  for evidence logs.
+
+The Card-Krueger goal prompts in [`orchestration/goals/`](orchestration/goals/)
+are designed to be mechanically checkable and safe without private data or live
+secrets.
+
 ## Verification Prompts
 
 Referee-style review:

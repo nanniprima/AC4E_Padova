@@ -30,7 +30,7 @@ into your copy of `starter_article`.
 | Subagents | Isolated review (avoid self-bias) | `.cursor/agents/{identification-reviewer,data-reviewer,replication-verifier,literature-reviewer,loop-verifier,pr-reviewer,sdd-orchestrator}.md` |
 | Hooks | Deterministic lifecycle checks | `.cursor/hooks.json` |
 | MCP (optional) | External tools (data APIs) | `.cursor/mcp.json` from `mcp.json.example` |
-| Orchestration log | Lightweight coordination | `notes/orchestration_log.md` |
+| Orchestration log | Lightweight coordination | `notes/orchestration_log.md`; course template in `../notes/orchestration_log_template.md` |
 | Replication gate | Clean-run evidence | `replication/README.md` + replication-checker skill |
 
 ## Workshop completion checklist
@@ -44,6 +44,7 @@ Mark each row before you leave. Use your lane’s native paths (`.codex/`, `.cla
 - [ ] `AGENTS.md` (or `CLAUDE.md`) lists repo map, verification commands, and “Do not” rules.
 - [ ] `.cursorignore` or equivalent excludes raw/confidential data from agent context.
 - [ ] At least three GitHub issues (or markdown issue list) for memo, estimation, and review.
+- [ ] Optional: copied one issue pattern from `orchestration/cloud_agent_issue_template.md`.
 
 ### Harness stack (Module 2)
 
@@ -54,6 +55,7 @@ Mark each row before you leave. Use your lane’s native paths (`.codex/`, `.cla
 - [ ] Created or invoked one **subagent** (for example `replication-verifier`, `data-reviewer`, or `identification-reviewer`).
 - [ ] (Cursor lane) Reviewed `mcp.json.example`; optional: one FRED series logged in memo.
 - [ ] Ran one **long-running goal** or checkpointed session with explicit stopping conditions.
+- [ ] Optional: used `orchestration/verification_loop.md` to record green/yellow/red exit status.
 
 ### Pipeline (Module 3)
 

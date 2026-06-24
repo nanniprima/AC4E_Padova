@@ -34,8 +34,8 @@ same harness concepts to your own research project.
 | Subagents or reviewers | `examples/codex/.codex/agents/` | `examples/claude/.claude/agents/` | `examples/cursor/.cursor/agents/` |
 | Hooks | `examples/codex/.codex/hooks.json`, `examples/codex/.codex/hooks/` | `examples/claude/.claude/settings.example.json` and hooks | `examples/cursor/.cursor/hooks.json` |
 | MCP | `examples/codex/.codex/config.toml.example` for bundled FRED server | `examples/claude/.mcp.json.example` for bundled FRED server | `examples/cursor/.cursor/mcp.json.example` for bundled FRED server |
-| Loop or goal | `/goal`, app goal, `templates/long_running_goal_prompt.md` | checkpoints, `/loop` where available, `claude --continue` | `agent-harness/cursor/goals/`, Agent checkpoints, Cloud Agent |
-| Cloud/background | Codex cloud and GitHub review | Claude web/desktop/background sessions where available | `agent-harness/cursor/cloud-agent-prompts/`, Cursor Cloud Agent |
+| Loop or goal | `/goal`, app goal, `templates/long_running_goal_prompt.md`, `orchestration/goals/` | checkpoints, `/loop` where available, `claude --continue`, `orchestration/goals/` | `agent-harness/cursor/goals/`, Agent checkpoints, Cloud Agent, `orchestration/goals/` |
+| Cloud/background | Codex cloud, GitHub review, `orchestration/cloud_agent_issue_template.md` | Claude web/desktop/background sessions where available, same issue contract | `agent-harness/cursor/cloud-agent-prompts/`, Cursor Cloud Agent, same issue contract |
 | Review | `/review`, `/diff`, PR evidence | subagent review, diff, PR evidence | review pane, Bugbot/review where configured, PR evidence |
 
 ## OS And Version Caveats
@@ -51,4 +51,5 @@ same harness concepts to your own research project.
 
 The deck follows [`slides/workshop/demo_map.md`](../slides/workshop/demo_map.md).
 The tool-lane block starts after the Card-Krueger example and before GitHub
-orchestration.
+orchestration. The shared issue, swarm, reviewer, loop, and goal templates live
+in [`orchestration/`](../orchestration/).

@@ -93,6 +93,25 @@ observation tools. It reads `FRED_API_KEY` only from the environment, supports
 offline teaching samples when no key is set, and does not accept arbitrary URLs
 or local file paths.
 
+## Cloud Orchestration Notes
+
+Checked on 2026-06-24 against official docs:
+
+- Codex cloud tasks run in a cloud environment and can be delegated from GitHub
+  with `@codex`; `@codex review` asks for PR review rather than implementation.
+- Codex project subagents live in `.codex/agents/*.toml`; read-only reviewer
+  examples should use restricted sandbox settings.
+- Claude Code project subagents live in `.claude/agents/` and are managed from
+  `/agents`; project subagents can be checked into version control.
+- Cursor supports subagents across editor, CLI, and cloud-agent contexts. The
+  current docs describe `/in-cloud` for a cloud subagent on its own branch, and
+  note that cloud subagents use team MCP configuration rather than local
+  `.cursor/mcp.json`.
+
+The shared Padova templates therefore use GitHub issues, branch names, allowed
+files, forbidden files, acceptance criteria, evidence, reviewer prompts, and
+stop conditions instead of relying on one tool-specific UI.
+
 ## Card-Krueger Running Example
 
 - David Card data page: <https://davidcard.berkeley.edu/data_sets.html>

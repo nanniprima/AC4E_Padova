@@ -22,6 +22,8 @@ Keep these files open:
 - [`examples/card-krueger/`](examples/card-krueger/) - shared runnable economics
   example.
 - [`examples/starter_article/`](examples/starter_article/) - shared mini repo.
+- [`orchestration/`](orchestration/) - cloud-agent issues, swarms, loops, goals,
+  and reviewer prompts.
 - [`docs/research_article_harness.md`](docs/research_article_harness.md) - final
   checklist.
 
@@ -47,7 +49,8 @@ Keep these files open:
 | Agent instructions | `templates/AGENTS_economics.md` |
 | Tool-lane manual | `tool-lanes/` |
 | Tool-lane harness | `examples/{codex,claude,cursor}/` |
-| Orchestration log | `examples/starter_article/notes/orchestration_log.md` |
+| Orchestration templates | `orchestration/` |
+| Orchestration log | `notes/orchestration_log_template.md` or `examples/starter_article/notes/orchestration_log.md` |
 | Review log | `templates/review_log.md` |
 | Final checklist | `docs/research_article_harness.md` |
 

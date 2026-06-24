@@ -10,8 +10,8 @@ This map keeps the deck aligned with the participant repository sequence.
 | Harness | Compare instructions, brief, memo, and templates | `examples/starter_article/`, `templates/` |
 | Harness | Inspect skills, subagents, hooks, and MCP placeholders | `examples/codex/`, `examples/claude/`, `examples/cursor/`, `agent-harness/{codex,claude,cursor}/` |
 | Tool lanes | Choose Codex, Claude Code, or Cursor path | `materials/tool_tracks.md`, `tool-lanes/`, `examples/{codex,codex-app,claude,claude-app,cursor}/` |
-| Orchestration | Turn a task into an issue and PR evidence plan | `templates/long_running_goal_prompt.md`, `templates/review_log.md` |
-| Sprint | Edit one bounded artifact and record delegation | `examples/starter_article/notes/orchestration_log.md` |
+| Orchestration | Turn a task into an issue, swarm, loop, and PR evidence plan | `orchestration/README.md`, `orchestration/cloud_agent_issue_template.md`, `orchestration/card_krueger_swarm.md`, `orchestration/verification_loop.md` |
+| Sprint | Edit one bounded artifact and record delegation | `notes/orchestration_log_template.md`, `examples/starter_article/notes/orchestration_log.md` |
 | Verification | Run tests or reviewer prompt; record result | `docs/research_article_harness.md`, `examples/card-krueger/tests/` |
 
 ## Build Evidence To Record In PRs

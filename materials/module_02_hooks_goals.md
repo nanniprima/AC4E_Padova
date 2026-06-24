@@ -56,6 +56,10 @@ table reference, run pytest. Stop when tests pass and replication-checker is gre
 Allowed: src/, tables/, paper/, docs/. Forbidden: data/raw/.
 ```
 
+For a Card-Krueger cloud-agent version with mechanical acceptance criteria, use
+the goals in [`orchestration/goals/`](../orchestration/goals/) and the loop rules
+in [`orchestration/verification_loop.md`](../orchestration/verification_loop.md).
+
 ## Tool Notes
 
 ### Codex CLI

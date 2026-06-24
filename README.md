@@ -19,6 +19,8 @@ paper, replication, or teaching project.
    economics example.
 7. Work from [`examples/starter_article/`](examples/starter_article/) when
    building your own harness.
+8. Use [`orchestration/`](orchestration/) for issue, cloud-agent, swarm, loop,
+   goal, and reviewer templates.
 
 ## Course Snapshot
 
@@ -81,6 +83,14 @@ By the end of the session, each participant should have at least a draft of:
 |   +-- paper/
 |   +-- playwright/
 |   +-- web-form/
++-- orchestration/
+|   +-- README.md
+|   +-- cloud_agent_issue_template.md
+|   +-- card_krueger_swarm.md
+|   +-- verification_loop.md
+|   +-- goals/
++-- notes/
+|   +-- orchestration_log_template.md
 +-- templates/
 +-- slides/
 +-- scripts/
