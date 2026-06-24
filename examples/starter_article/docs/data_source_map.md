@@ -4,7 +4,7 @@
 | --- | --- | --- | --- | --- |
 | Workshop panel (demo) | `data/raw/city_month_panel.csv` | In repo | `log_emp`, `treat`, `post` | Synthetic — Module 3 empirics |
 | Public form demo (Playwright) | `http://localhost:8000` | Local server | Form fields | Module 4: run `examples/playwright/fill_demo_form.py` |
-| FRED (optional MCP) | <https://fred.stlouisfed.org/> | API key in env | e.g. `UNRATE` | Cursor lane: copy `mcp.json.example` |
+| FRED (optional MCP) | <https://fred.stlouisfed.org/> via `agent-harness/mcp/fred/` | API key in env for live calls; offline sample otherwise | e.g. `UNRATE` metadata | Copy your lane MCP example; document any series used |
 
 ## Playwright evidence (Module 4)
 

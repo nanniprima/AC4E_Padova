@@ -28,7 +28,7 @@ current docs.
 | Subagents | `agents/<name>.toml` | `.codex/agents/<name>.toml` |
 | Hooks config | `hooks/hooks.json` | `.codex/hooks.json` |
 | Hook scripts | `hooks/*.py` | `.codex/hooks/*.py` |
-| MCP config example | `mcp/config.toml.example` | merge into `.codex/config.toml` |
+| MCP config example | `mcp/config.toml.example` | merge into `.codex/config.toml`; uses `agent-harness/mcp/fred/` |
 | Goal examples | `goals/*.md` | paste into `/goal` or app goal controls |
 | Orchestration prompts | `orchestration/*.md` | paste into GitHub issues or cloud tasks |
 
@@ -49,6 +49,12 @@ Review hooks before trusting them:
 
 ```text
 /hooks
+```
+
+Review the shared FRED MCP server before enabling it:
+
+```bash
+python3 agent-harness/mcp/fred/scripts/smoke.py --offline
 ```
 
 ## CLI And App Notes

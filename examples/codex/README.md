@@ -39,7 +39,7 @@ Review hooks before trusting them:
 | Skills | `.agents/skills/` |
 | Subagents/reviewers | `.codex/agents/` |
 | Hooks | `.codex/hooks.json`, `.codex/hooks/` |
-| MCP config example | `.codex/config.toml.example` |
+| MCP config example | `.codex/config.toml.example` for `agent-harness/mcp/fred/` |
 | Goal examples | `goals/` |
 | Orchestration prompts | `orchestration/` |
 
@@ -48,6 +48,12 @@ Skills included: `research-sdd`, `replication-checker`, `referee-checklist`,
 
 Reviewer subagents included: `identification-data-reviewer`,
 `replication-verifier`, `sdd-orchestrator`, and `pr-scope-reviewer`.
+
+Optional MCP smoke test from the Padova repository root:
+
+```bash
+python3 agent-harness/mcp/fred/scripts/smoke.py --offline
+```
 
 ## Card-Krueger Read-Only Prompt
 

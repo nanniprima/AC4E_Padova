@@ -77,9 +77,21 @@ verified in the installed Cursor release before use.
 
 - Model Context Protocol docs: <https://modelcontextprotocol.io/docs/getting-started/intro>
 - MCP specification: <https://modelcontextprotocol.io/specification/2025-06-18>
+- MCP stdio transport: <https://modelcontextprotocol.io/specification/2025-06-18/basic/transports>
+- FRED API documentation: <https://fred.stlouisfed.org/docs/api/fred/>
+- FRED API keys: <https://fred.stlouisfed.org/docs/api/api_key.html>
+- FRED series metadata endpoint: <https://fred.stlouisfed.org/docs/api/fred/series.html>
+- FRED series search endpoint: <https://fred.stlouisfed.org/docs/api/fred/series_search.html>
+- FRED series observations endpoint: <https://fred.stlouisfed.org/docs/api/fred/series_observations.html>
 - Playwright docs: <https://playwright.dev/docs/intro>
 - Playwright Python docs: <https://playwright.dev/python/docs/intro>
 - Playwright codegen: <https://playwright.dev/docs/codegen>
+
+MCP/FRED note checked on 2026-06-24: `agent-harness/mcp/fred/` is a bundled
+stdio MCP example with bounded public FRED search, series metadata, and
+observation tools. It reads `FRED_API_KEY` only from the environment, supports
+offline teaching samples when no key is set, and does not accept arbitrary URLs
+or local file paths.
 
 ## Card-Krueger Running Example
 

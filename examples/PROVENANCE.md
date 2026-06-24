@@ -10,7 +10,8 @@ Sanitized copies for teaching. No API keys or personal paths.
 | `agent-harness/codex/` | Adapted from Pavia harness and checked against official Codex docs on 2026-06-24 | Portable Codex skills, subagents, hooks, MCP config, goals, orchestration |
 | `agent-harness/claude/` | Adapted from Pavia harness and checked against official Claude Code docs on 2026-06-24 | Portable Claude skills, subagents, settings/hooks, MCP config, goals, orchestration |
 | `agent-harness/cursor/` | Adapted from Pavia harness and checked against official Cursor docs on 2026-06-24 | Portable Cursor rules, skills, subagents, hooks, MCP config, goals, orchestration, Cloud Agent prompts |
-| `examples/cursor/.cursor/mcp.json.example` | Template only | Uses `${env:FRED_API_KEY}`; do not commit secrets |
+| `agent-harness/mcp/fred/` | Course-authored, checked against MCP and FRED docs on 2026-06-24 | Stdlib-only public-data MCP example with offline smoke test |
+| `examples/cursor/.cursor/mcp.json.example` | Template only | Uses `${env:FRED_API_KEY}` for the bundled FRED server; do not commit secrets |
 | `examples/plugins/README.md` | Cursor marketplace docs | Optional superpowers / doc-sync plugins |
 
 Lane folders (`codex/`, `claude/`, `cursor/`) mirror harness **skills and agents** in native paths; merge into a copy of `starter_article/`.

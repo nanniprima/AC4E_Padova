@@ -29,6 +29,13 @@ Checked on 2026-06-24.
 | Raw/private data | None included |
 | Research caveat | The synthetic data are not Card and Krueger's raw data, do not reproduce the published estimates, and cannot support a substantive causal claim. |
 
+## Optional Public Macro Context
+
+The workshop includes a small FRED MCP example at `agent-harness/mcp/fred/`.
+Participants may use it to record public macro series metadata, such as `UNRATE`,
+in a separate memo or data-source row. That metadata is not part of the bundled
+Card-Krueger teaching panel and does not change the causal caveat above.
+
 ## Variables
 
 | Variable | Type | Meaning |

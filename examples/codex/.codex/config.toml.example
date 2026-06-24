@@ -8,10 +8,13 @@
 command = "python3"
 args = ["-m", "fred_mcp_server"]
 env_vars = ["FRED_API_KEY"]
+cwd = "."
+
+[mcp_servers.fred.env]
+PYTHONPATH = "agent-harness/mcp/fred/src"
 
 # Teaching note:
-# - This is a config example, not a bundled server implementation.
-# - Issue #9 in this workshop track is responsible for adding or validating the
-#   FRED/public-data MCP server itself.
+# - The bundled server lives in agent-harness/mcp/fred/.
+# - Without FRED_API_KEY it returns offline teaching samples for smoke tests.
 # - A Card-Krueger task can use FRED metadata for macro context, but the bundled
 #   synthetic panel remains the only runnable local dataset in this repo.

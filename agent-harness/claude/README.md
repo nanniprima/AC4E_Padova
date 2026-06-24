@@ -23,7 +23,7 @@ Official Claude Code docs checked on 2026-06-24:
 | Subagents | `agents/<name>.md` | `.claude/agents/<name>.md` |
 | Settings and hooks | `hooks/settings.example.json` | `.claude/settings.json` |
 | Hook scripts | `hooks/*.py` | `.claude/hooks/*.py` |
-| MCP example | `mcp/mcp.json.example` | `.mcp.json` at repo root |
+| MCP example | `mcp/mcp.json.example` | `.mcp.json` at repo root; uses `agent-harness/mcp/fred/` |
 | Checkpoint prompts | `goals/*.md`, `orchestration/*.md` | paste into a Claude session |
 
 For a disposable project:
@@ -44,6 +44,12 @@ Review hooks before trusting them:
 
 ```text
 /hooks
+```
+
+Review the shared FRED MCP server before enabling it:
+
+```bash
+python3 agent-harness/mcp/fred/scripts/smoke.py --offline
 ```
 
 ## CLI And App Notes

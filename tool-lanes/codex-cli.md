@@ -38,7 +38,7 @@ Do not edit files. Explain the workshop path and the first command I should run.
 | Skills | `examples/codex/.agents/skills/` copied to `.agents/skills/` |
 | Subagents/reviewers | `examples/codex/.codex/agents/` copied to `.codex/agents/` |
 | Hooks | `examples/codex/.codex/hooks.json` and `examples/codex/.codex/hooks/`, trusted with `/hooks` |
-| MCP | `examples/codex/.codex/config.toml.example`; keep secrets in env vars |
+| MCP | `examples/codex/.codex/config.toml.example`; shared server in `agent-harness/mcp/fred/`; keep secrets in env vars |
 | Loop/goal | `/goal`, `templates/long_running_goal_prompt.md`, `codex resume --last` |
 | Cloud/GitHub | Issue comments for Codex cloud tasks; GitHub integration for review |
 | Review | `/diff`, `/review`, PR checklist, tests |

@@ -23,7 +23,7 @@ Official Cursor docs checked on 2026-06-24:
 | Skills | `skills/<name>/SKILL.md` | `.cursor/skills/<name>/SKILL.md` |
 | Subagents | `agents/<name>.md` | `.cursor/agents/<name>.md` |
 | Hook examples | `hooks/hooks.json` and `hooks/*.py` | `.cursor/hooks.json` and `.cursor/hooks/*.py` |
-| MCP example | `mcp/mcp.json.example` | `.cursor/mcp.json` |
+| MCP example | `mcp/mcp.json.example` | `.cursor/mcp.json`; uses `agent-harness/mcp/fred/` |
 | Cloud prompts | `cloud-agent-prompts/*.md` | paste into Cursor Cloud Agent |
 | Checkpoint prompts | `goals/*.md`, `orchestration/*.md` | paste into Cursor Agent or Cloud Agent |
 
@@ -44,6 +44,12 @@ cp /path/to/AC4E_Padova/agent-harness/cursor/AGENTS.md AGENTS.md
 
 Review hooks and MCP server code before enabling them. Keep real API keys in
 environment variables, not in tracked JSON.
+
+Smoke-test the shared FRED MCP server before enabling it:
+
+```bash
+python3 agent-harness/mcp/fred/scripts/smoke.py --offline
+```
 
 ## Included Skills
 

@@ -38,9 +38,15 @@ to inspect and trust hooks.
 | `.claude/agents/` | `identification-reviewer`, `data-reviewer`, `replication-verifier`, `literature-reviewer`, `loop-verifier`, `pr-reviewer`, `sdd-orchestrator` |
 | `.claude/settings.example.json` | permissions and hook examples |
 | `.claude/hooks/` | prompt safety, pre-tool policy, verification reminder |
-| `.mcp.json.example` | FRED/public-data MCP config template with env vars |
+| `.mcp.json.example` | FRED/public-data MCP config for `agent-harness/mcp/fred/` with env vars |
 | `goals/` | checkpointed Card-Krueger task prompts |
 | `orchestration/` | cloud-swarm and review-loop prompts |
+
+Optional MCP smoke test from the Padova repository root:
+
+```bash
+python3 agent-harness/mcp/fred/scripts/smoke.py --offline
+```
 
 ## Sample Skill Prompt
 

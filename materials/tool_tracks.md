@@ -33,7 +33,7 @@ same harness concepts to your own research project.
 | Skills | `examples/codex/.agents/skills/` | `examples/claude/.claude/skills/` | `examples/cursor/.cursor/skills/` |
 | Subagents or reviewers | `examples/codex/.codex/agents/` | `examples/claude/.claude/agents/` | `examples/cursor/.cursor/agents/` |
 | Hooks | `examples/codex/.codex/hooks.json`, `examples/codex/.codex/hooks/` | `examples/claude/.claude/settings.example.json` and hooks | `examples/cursor/.cursor/hooks.json` |
-| MCP | `examples/codex/.codex/config.toml.example` now; issue #9 validates the server | `examples/claude/.mcp.json.example` now; issue #9 validates the server | `examples/cursor/.cursor/mcp.json.example`; issue #9 validates the server |
+| MCP | `examples/codex/.codex/config.toml.example` for bundled FRED server | `examples/claude/.mcp.json.example` for bundled FRED server | `examples/cursor/.cursor/mcp.json.example` for bundled FRED server |
 | Loop or goal | `/goal`, app goal, `templates/long_running_goal_prompt.md` | checkpoints, `/loop` where available, `claude --continue` | `agent-harness/cursor/goals/`, Agent checkpoints, Cloud Agent |
 | Cloud/background | Codex cloud and GitHub review | Claude web/desktop/background sessions where available | `agent-harness/cursor/cloud-agent-prompts/`, Cursor Cloud Agent |
 | Review | `/review`, `/diff`, PR evidence | subagent review, diff, PR evidence | review pane, Bugbot/review where configured, PR evidence |

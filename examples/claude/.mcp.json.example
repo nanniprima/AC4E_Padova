@@ -1,12 +1,13 @@
 {
-  "_comment": "Example Claude Code MCP config for a FRED/public-data metadata server. Copy to .mcp.json at the repository root. Keep FRED_API_KEY in the environment; do not commit secrets.",
+  "_comment": "Example Claude Code MCP config for the bundled FRED/public-data MCP server. Copy to .mcp.json at the repository root. Keep FRED_API_KEY in the environment; do not commit secrets. Without a key, the server can return offline teaching samples.",
   "mcpServers": {
     "fred": {
       "type": "stdio",
       "command": "python3",
       "args": ["-m", "fred_mcp_server"],
       "env": {
-        "FRED_API_KEY": "${FRED_API_KEY}",
+        "FRED_API_KEY": "${FRED_API_KEY:-}",
+        "FRED_MCP_OFFLINE": "${FRED_MCP_OFFLINE:-0}",
         "PYTHONPATH": "${CLAUDE_PROJECT_DIR}/agent-harness/mcp/fred/src"
       }
     }

@@ -35,7 +35,7 @@ Do not edit files. Tell me which lane files I should copy for Codex app.
 | Skills | `examples/codex/.agents/skills/` copied to `.agents/skills/` |
 | Subagents/reviewers | `examples/codex/.codex/agents/` copied to `.codex/agents/` |
 | Hooks | `examples/codex/.codex/hooks.json` and `examples/codex/.codex/hooks/`; review and trust with `/hooks` in the app |
-| MCP | `examples/codex/.codex/config.toml.example`; secrets stay outside git |
+| MCP | `examples/codex/.codex/config.toml.example`; shared server in `agent-harness/mcp/fred/`; secrets stay outside git |
 | Loop/goal | app goal controls or `/goal` where available; otherwise checkpoint prompts |
 | Cloud/GitHub | Codex cloud tasks and GitHub review when account quota permits |
 | Review | `/diff`, `/review`, PR evidence, generated outputs |

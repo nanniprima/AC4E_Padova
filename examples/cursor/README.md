@@ -36,7 +36,7 @@ Keep `FRED_API_KEY` in your environment; do not commit real API keys.
 | `.cursor/agents/replication-verifier.md` | Reproducibility and tests review |
 | `.cursor/agents/sdd-orchestrator.md` | Spec-driven planning coordinator |
 | `.cursor/hooks.json`, `.cursor/hooks/` | Version-sensitive hook examples |
-| `.cursor/mcp.json.example` | FRED/public-data MCP template |
+| `.cursor/mcp.json.example` | FRED/public-data MCP config for `agent-harness/mcp/fred/` |
 | `.cursor/environment.json` | Optional Cloud Agent bootstrap |
 | `goals/` | Ready-to-paste Card-Krueger goal prompts |
 | `orchestration/` | Review-loop and swarm prompts |
@@ -47,6 +47,12 @@ skills in `.cursor/skills/`, subagents in `.cursor/agents/`, and project MCP
 configuration in `.cursor/mcp.json`. Hook examples are version-sensitive; read
 the installed Cursor hook docs before relying on `.cursor/hooks.json` for
 enforcement.
+
+Optional MCP smoke test from the Padova repository root:
+
+```bash
+python3 agent-harness/mcp/fred/scripts/smoke.py --offline
+```
 
 ## Exercise
 

@@ -33,7 +33,7 @@ files I need from examples/claude/.
 | Skills | `examples/claude/.claude/skills/` |
 | Subagents/reviewers | `examples/claude/.claude/agents/` |
 | Hooks | `examples/claude/.claude/settings.example.json` and `.claude/hooks/` |
-| MCP | `examples/claude/.mcp.json.example` copied to project `.mcp.json`; env vars for secrets |
+| MCP | `examples/claude/.mcp.json.example` copied to project `.mcp.json`; shared server in `agent-harness/mcp/fred/`; env vars for secrets |
 | Loop/goal | app checkpoints, app sessions, `/loop` where available |
 | Cloud/background | desktop/web/background sessions where account features allow |
 | Review | visual diff, reviewer subagent, PR evidence |

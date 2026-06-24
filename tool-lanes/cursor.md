@@ -39,7 +39,7 @@ first harness files to copy.
 | Skills | `examples/cursor/.cursor/skills/` |
 | Subagents/reviewers | `examples/cursor/.cursor/agents/` |
 | Hooks | `examples/cursor/.cursor/hooks.json` and `.cursor/hooks/`, version-sensitive |
-| MCP | `examples/cursor/.cursor/mcp.json.example`; secrets through env vars |
+| MCP | `examples/cursor/.cursor/mcp.json.example`; shared server in `agent-harness/mcp/fred/`; secrets through env vars |
 | Loop/goal | `agent-harness/cursor/goals/`, checkpoints, Cursor CLI resume, Cloud Agent handoff |
 | Cloud/background | `agent-harness/cursor/cloud-agent-prompts/`, Cursor Cloud Agent, background agents |
 | Review | review pane, Bugbot/review where configured, PR evidence |
