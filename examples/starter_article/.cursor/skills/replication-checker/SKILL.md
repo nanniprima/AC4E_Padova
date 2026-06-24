@@ -1,78 +1,58 @@
 ---
 name: replication-checker
 description: >-
-  Runs a clean-room replication check on economics research pipelines. Verifies
-  dependencies are declared, no hardcoded paths exist, data sources are
-  documented, and the pipeline runs from a clean state. Use when checking
-  replication readiness, validating run instructions, before sharing code, or
-  when the user asks to verify reproducibility.
+  Use when asked to verify reproducibility, audit a replication package, check a
+  clean run, validate run instructions, or review before sharing research code.
 ---
 
 # Replication Checker
 
-Performs a clean-room replication check on research pipelines. Ensures a colleague can run the code from scratch.
+This is a clean-room reproducibility checklist for economics research projects.
 
-## When to Use
+## Checklist
 
-- User asks to "verify replication," "check pipeline," "validate reproducibility"
-- Before sharing code or submitting a replication package
-- After major pipeline changes
+1. Read `AGENTS.md`, the example or project README, and any data source map.
+2. Identify the documented entry point and the smallest safe verification command.
+3. Check path hygiene: no `/Users/`, `C:\`, machine names, or hidden local data
+   assumptions in runnable code.
+4. Check dependencies: requirements are declared and match imports.
+5. Check data documentation: source, unit of observation, sample restriction,
+   transformations, and caveats are visible.
+6. Check generated outputs: outputs are either reproducible or clearly ignored.
+7. Run the smallest safe command only when the user or task allows execution.
+8. Return GREEN only if runnable evidence supports it; otherwise use YELLOW or RED.
 
-## Workflow
+## Card-Krueger Baseline
 
-1. **Identify entry point** — Script, notebook, or Make target in `src/`, `replication/`, or `scripts/`
-2. **Run checks** — Execute `scripts/check_replication.py` from repo root
-3. **Review criteria** — See `references/replication_criteria.md` for pass/fail definitions
-4. **Run pipeline** — Attempt a clean run from repo root; note success/failure and any errors
-5. **Produce report** — Output using the template below
+Expected verification commands from the repository root:
 
-## What to Check
+```bash
+python3 examples/card-krueger/src/did_analysis.py
+python3 -m pytest examples/card-krueger/tests
+```
 
-| Check | Action |
-|-------|--------|
-| **Hardcoded paths** | Run script; grep for `/Users/`, `C:\\`, `localhost`, machine names |
-| **Dependencies** | `requirements.txt` or `pyproject.toml` exists and lists all imports |
-| **Replication docs** | `replication/README.md` exists with setup and run instructions |
-| **Data sources** | `docs/data_source_map.md` or equivalent documents data access |
-| **Clean run** | Pipeline executes from fresh clone + venv without manual edits |
-
-## Output Format
+## Output
 
 ```markdown
-# Replication Report — [Project/Root]
+# Replication Report
 
-**Status:** green / yellow / red
+**Status:** GREEN / YELLOW / RED
 
-## Summary
-[1–2 sentence verdict]
+## Evidence
 
-## Checks
-| Check | Status | Notes |
-|-------|--------|-------|
-| Dependencies declared | pass/fail | |
-| No hardcoded paths | pass/fail | |
-| Replication README | pass/fail | |
-| Data documented | pass/fail | |
-| Imports in requirements | pass/fail | |
-| Clean run | pass/fail | |
+| Criterion | Status | Evidence |
+| --- | --- | --- |
 
-## Blockers (must fix)
-- [ ]
+## Blockers
 
 ## Recommendations
-- [ ]
 
-## Run Command
-\`\`\`bash
-[exact command to run from repo root]
-\`\`\`
+## Commands
 ```
 
-## Scripts
+## Constraints
 
-**check_replication.py** — Run from repo root:
-```bash
-python skills/course/replication-checker/scripts/check_replication.py /path/to/repo
-```
-
-Reports pass/fail for each check. For full pass/fail definitions, see `references/replication_criteria.md`.
+- Do not mark GREEN without command output or equivalent evidence.
+- Do not modify data files during an audit.
+- Do not treat a successful synthetic-data run as a substantive replication of
+  Card and Krueger (1994).

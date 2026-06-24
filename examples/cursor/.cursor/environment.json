@@ -1,5 +1,5 @@
 {
-  "install": "python3 -m pip install -r requirements.txt && npm install",
+  "install": "if [ -f requirements.txt ]; then python3 -m pip install -r requirements.txt; fi; if [ -f package.json ]; then npm install; fi",
   "terminals": [
     {
       "name": "Local Playwright form",
@@ -7,4 +7,3 @@
     }
   ]
 }
-

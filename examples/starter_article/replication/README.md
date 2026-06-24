@@ -22,8 +22,7 @@ Expected outputs:
 
 ## Replication check
 
-```bash
-python .cursor/skills/replication-checker/scripts/check_replication.py .
-```
-
-(Codex/Claude: adjust path to your lane’s `replication-checker` skill folder.)
+Use your lane's `replication-checker` skill as a read-only checklist. It should
+cite the clean-run commands above, path hygiene, data documentation, generated
+outputs, and remaining gaps. Do not mark the project GREEN without command
+evidence.

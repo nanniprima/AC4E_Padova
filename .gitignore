@@ -11,6 +11,7 @@ test-results/
 .env
 .env.*
 .mcp.json
+/.cursor/mcp.json
 data/
 outputs/
 !examples/card-krueger/data/

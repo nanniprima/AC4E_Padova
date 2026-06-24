@@ -1,0 +1,17 @@
+---
+description: Cursor Cloud Agent rules for issue-scoped branches, PR evidence, and reviewer handoff.
+globs: "agent-harness/cursor/**, examples/card-krueger/**, docs/**, materials/**"
+alwaysApply: false
+---
+
+- Every cloud task needs one GitHub issue, one branch, allowed files, out-of-scope
+  boundaries, acceptance criteria, and a verification plan.
+- The branch name must appear in the prompt and PR body.
+- The PR body must include changed files, verification evidence, reviewer role
+  used, and remaining risks.
+- Do not broaden a cloud task to adjacent workshop material; open a follow-up
+  issue instead.
+- Cloud subagents use team MCP configuration from Cursor Cloud Agent settings,
+  not local `.cursor/mcp.json`. Do not assume local API keys are available.
+- Do not merge a cloud-agent PR without human review, even if a verifier returns
+  GREEN.

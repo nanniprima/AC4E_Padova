@@ -1,9 +1,20 @@
 {
   "version": 1,
+  "_comment": "Cursor hooks are version-sensitive. Treat this as an example hook plan: read each script and verify event names in the installed Cursor docs before copying to .cursor/hooks.json.",
   "hooks": {
-    "postToolUse": [
+    "beforeShellExecution": [
       {
-        "command": "python .cursor/hooks/verification_reminder.py"
+        "command": "python3 .cursor/hooks/pre_shell_policy.py"
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": "python3 .cursor/hooks/verification_reminder.py"
+      }
+    ],
+    "stop": [
+      {
+        "command": "python3 .cursor/hooks/session_stop_note.py"
       }
     ]
   }

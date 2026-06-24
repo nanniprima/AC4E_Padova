@@ -33,7 +33,6 @@ spec/                  # Optional research SDD (research-sdd skill)
 ```bash
 python src/estimate_did.py
 python -m pytest tests/ -q
-python .cursor/skills/replication-checker/scripts/check_replication.py .
 # latexmk -pdf paper/main.tex   # if latexmk installed
 ```
 
@@ -57,3 +56,5 @@ python .cursor/skills/replication-checker/scripts/check_replication.py .
 
 Install skills and agents from your lane’s `examples/{codex,claude,cursor}/` folder.
 Cursor paths use `.cursor/`; Codex uses `.codex/`; Claude uses `.claude/`.
+Use the replication-checker skill as a review checklist, then cite command output
+from `python src/estimate_did.py` and `python -m pytest tests/ -q`.

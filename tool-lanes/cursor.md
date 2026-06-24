@@ -35,13 +35,13 @@ first harness files to copy.
 
 | Need | Path or action |
 | --- | --- |
-| Context file | `AGENTS.md`, `examples/cursor/AGENTS.md`, `.cursor/rules/economics-research.mdc` |
+| Context file | `AGENTS.md`, `examples/cursor/AGENTS.md`, `.cursor/rules/*.mdc` |
 | Skills | `examples/cursor/.cursor/skills/` |
 | Subagents/reviewers | `examples/cursor/.cursor/agents/` |
-| Hooks | `examples/cursor/.cursor/hooks.json` and `.cursor/hooks/` |
+| Hooks | `examples/cursor/.cursor/hooks.json` and `.cursor/hooks/`, version-sensitive |
 | MCP | `examples/cursor/.cursor/mcp.json.example`; secrets through env vars |
-| Loop/goal | Agent checkpoints, Cursor CLI resume, Cloud Agent handoff |
-| Cloud/background | Cursor Cloud Agent, background agents, worktrees where available |
+| Loop/goal | `agent-harness/cursor/goals/`, checkpoints, Cursor CLI resume, Cloud Agent handoff |
+| Cloud/background | `agent-harness/cursor/cloud-agent-prompts/`, Cursor Cloud Agent, background agents |
 | Review | review pane, Bugbot/review where configured, PR evidence |
 
 ## Merge Steps
@@ -61,6 +61,8 @@ cp examples/cursor/.cursor/mcp.json.example /path/to/my-article/.cursor/mcp.json
 Edit the MCP config to use environment variables or local ignored files for
 secrets. Never commit API keys.
 
+Portable source pack: [`agent-harness/cursor/`](../agent-harness/cursor/).
+
 ## Card-Krueger Prompt
 
 ```text
@@ -79,6 +81,13 @@ synthetic-data caveat, and test evidence. Return blockers first. Do not edit
 files.
 ```
 
+## Cloud Agent Prompt
+
+Use [`agent-harness/cursor/cloud-agent-prompts/card-krueger-issue.md`](../agent-harness/cursor/cloud-agent-prompts/card-krueger-issue.md)
+for issue-scoped tasks. The prompt requires an issue number, branch, allowed
+files, out-of-scope list, acceptance criteria, verification evidence, and a
+read-only reviewer subagent before PR review.
+
 ## Notes
 
 - Cursor rules can be project, user, or team rules. For this workshop, keep
@@ -87,5 +96,10 @@ files.
 - Cursor docs expose markdown versions of many pages, e.g.
   `https://cursor.com/docs/rules.md`, which are useful for agents auditing
   claims.
+- Cursor skills are stored as `SKILL.md` files under `.cursor/skills/`.
+- Cursor project subagents are markdown files under `.cursor/agents/` with YAML
+  frontmatter. The included reviewers use `model: inherit` and read-only mode.
+- Cursor MCP project configuration lives at `.cursor/mcp.json`; the example uses
+  `${env:FRED_API_KEY}` and `${workspaceFolder}` interpolation.
 - Cloud Agent, Bugbot/review, hooks, and CLI features can depend on plan,
   version, and workspace settings. Verify in the installed version.

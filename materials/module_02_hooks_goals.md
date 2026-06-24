@@ -10,7 +10,7 @@ copy. Run one long-running goal with explicit stopping conditions.
 | Layer | Role |
 | --- | --- |
 | Skill | Reusable procedure (referee, replication, SDD, prose) |
-| Subagent | Isolated reviewer (identification, verifier) |
+| Subagent | Isolated reviewer (identification, data, replication, PR) |
 | Hook | Deterministic reminder after edits |
 | Goal | Multi-step task with checkpoints |
 
@@ -42,7 +42,9 @@ Run the replication-checker skill on this repo root. Report green/yellow/red.
 ## Step-by-step: hooks
 
 Use disposable copy first. Codex: `examples/codex/.codex/`. Claude: `settings.example.json`.
-Cursor: `examples/cursor/.cursor/hooks.json`.
+Cursor: `examples/cursor/.cursor/hooks.json`. Cursor hook events are
+version-sensitive, so review the installed Cursor hook docs before relying on
+the examples for enforcement.
 
 ## Step-by-step: long-running goal
 
@@ -78,7 +80,8 @@ Allowed: src/, tables/, paper/, docs/. Forbidden: data/raw/.
 ### Cursor
 
 - Full merge per [`examples/cursor/README.md`](../examples/cursor/README.md).
-- Subagents: Task tool or `@identification-reviewer`.
+- Subagents: `identification-reviewer`, `data-reviewer`, `replication-verifier`,
+  or `pr-reviewer`.
 - Optional MCP: copy the lane `mcp.json.example` to the project config path and keep your API key out of git.
 
 ## Debrief

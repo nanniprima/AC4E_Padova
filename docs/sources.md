@@ -64,6 +64,15 @@ secret, raw-data, and private-data paths.
 - Cursor MCP: <https://cursor.com/docs/mcp>
 - Cursor cloud agents: <https://cursor.com/docs/cloud-agent>
 
+Harness note checked on 2026-06-24: the Padova Cursor lane uses
+`.cursor/rules/*.mdc` for project rules, `AGENTS.md` for simple shared
+instructions, `.cursor/skills/` for project skills, `.cursor/agents/` for
+project subagents, and `.cursor/mcp.json` for project MCP servers. The MCP
+example uses Cursor interpolation (`${env:FRED_API_KEY}` and
+`${workspaceFolder}`). Hook examples live in `.cursor/hooks.json` plus
+`.cursor/hooks/`, but hook event support is version-sensitive and should be
+verified in the installed Cursor release before use.
+
 ## MCP And Playwright
 
 - Model Context Protocol docs: <https://modelcontextprotocol.io/docs/getting-started/intro>

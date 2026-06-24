@@ -26,8 +26,8 @@ into your copy of `starter_article`.
 | --- | --- | --- |
 | Project context | Always-on instructions | `AGENTS.md`, `.cursor/rules/*.mdc` |
 | Research spec | Plan before code | `docs/project_brief.md`, `spec/intent.md` (via research-sdd skill) |
-| Skills | Reusable procedures | `.cursor/skills/referee-checklist/`, `replication-checker/`, `paper-polisher/`, `research-sdd/` |
-| Subagents | Isolated review (avoid self-bias) | `.cursor/agents/verifier.md`, `identification-reviewer.md` |
+| Skills | Reusable procedures | `.cursor/skills/{research-sdd,data-reviewer,replication-checker,referee-checklist,paper-polisher,loop-on-verification}/` |
+| Subagents | Isolated review (avoid self-bias) | `.cursor/agents/{identification-reviewer,data-reviewer,replication-verifier,literature-reviewer,loop-verifier,pr-reviewer,sdd-orchestrator}.md` |
 | Hooks | Deterministic lifecycle checks | `.cursor/hooks.json` |
 | MCP (optional) | External tools (data APIs) | `.cursor/mcp.json` from `mcp.json.example` |
 | Orchestration log | Lightweight coordination | `notes/orchestration_log.md` |
@@ -51,7 +51,7 @@ Mark each row before you leave. Use your lane’s native paths (`.codex/`, `.cla
 - [ ] Installed **replication-checker** skill.
 - [ ] Installed **research-sdd** or **paper-polisher** skill (at least one writing/spec skill).
 - [ ] Configured at least one **hook** (Codex, Claude, or Cursor).
-- [ ] Created or invoked one **subagent** (verifier or identification-reviewer).
+- [ ] Created or invoked one **subagent** (for example `replication-verifier`, `data-reviewer`, or `identification-reviewer`).
 - [ ] (Cursor lane) Reviewed `mcp.json.example`; optional: one FRED series logged in memo.
 - [ ] Ran one **long-running goal** or checkpointed session with explicit stopping conditions.
 

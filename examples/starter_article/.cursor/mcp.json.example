@@ -1,10 +1,13 @@
 {
+  "_comment": "Example Cursor MCP config for a FRED/public-data metadata server. Copy to .cursor/mcp.json. Keep FRED_API_KEY in the environment; do not commit secrets. Cursor Cloud Agent uses team MCP settings, not this local file.",
   "mcpServers": {
-    "fredapi": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-fetch"],
+    "fred": {
+      "type": "stdio",
+      "command": "python3",
+      "args": ["-m", "fred_mcp_server"],
       "env": {
-        "FRED_API_KEY": "YOUR_FRED_API_KEY_HERE"
+        "FRED_API_KEY": "${env:FRED_API_KEY}",
+        "PYTHONPATH": "${workspaceFolder}/agent-harness/mcp/fred/src"
       }
     }
   }

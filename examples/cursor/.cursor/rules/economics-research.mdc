@@ -1,22 +1,19 @@
 ---
-description: Economics research workflow rules for papers, data analysis, and replication.
-globs:
-  - "**/*.py"
-  - "**/*.R"
-  - "**/*.do"
-  - "**/*.tex"
-  - "**/*.md"
+description: Economics research safety and reproducibility standards for the Padova Card-Krueger workshop repository.
+globs: "**/*.md, **/*.py, **/*.tex, **/*.bib, examples/card-krueger/**"
 alwaysApply: false
 ---
 
-# Economics Research Rules
-
-- Never edit `data/raw/` without explicit user approval.
-- Do not fabricate citations, data sources, coefficients, or robustness results.
-- For causal claims, state the identifying assumption being used.
-- For regression code, report standard error choices and clustering.
-- For paper review, every major issue must cite a concrete location in the text,
-  table, equation, or code.
-- After running tests or analysis, summarize the command, result, and generated
-  files.
-
+- Read `AGENTS.md`, the relevant README, and any data source map before editing.
+- Keep changes scoped to the active issue or prompt.
+- Do not inspect, print, or edit `.env`, `secrets/`, `data/raw/`, or
+  `data/private/` without explicit human approval.
+- Do not modify `examples/card-krueger/data/synthetic_fast_food_panel.csv` unless
+  the issue explicitly allows a teaching fixture update.
+- Preserve the synthetic-data caveat for any Card-Krueger result, figure, memo,
+  or slide.
+- Do not invent citations, coefficients, standard errors, sample sizes, or
+  robustness results.
+- Report exact verification commands and outcomes before claiming completion.
+- Route nontrivial empirical changes through `research-sdd`, then ask a read-only
+  reviewer subagent to check the result.
